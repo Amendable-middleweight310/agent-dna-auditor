@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Agent DNA Auditor" width="720" />
+</p>
+
 # Agent DNA Auditor
 
 **Scan your AI coding agents. Classify what's ideology vs what's framework knowledge. Embed DNA directly into agent definitions.**
