@@ -72,6 +72,7 @@ Apply these heuristics to each extracted behavior:
 - Defines quality thresholds or methodology steps that are framework-agnostic
 - Establishes trust boundaries, security posture, or accessibility standards
 - Sets writing tone, formatting rules, or communication standards
+- Defines behavioral patterns (how to ask questions, when to delegate, how to exit sessions)
 - Would still apply if the project switched from React to Vue, or Python to Rust
 
 **Tech Stack Skill (Invoke) if:**
@@ -84,6 +85,8 @@ Apply these heuristics to each extracted behavior:
 **When classification is unclear:**
 - Ask the user: "This behavior could go either way. Is [X] something this agent should always do (DNA), or only when working with [Y framework] (Tech Skill)?"
 - Default to DNA for methodology, default to Tech Skill for implementation details
+
+**Check against all DNA strands** — both the 7 core strands (Architecture, Frontend Design, Security, Accessibility, Testing, Quality) and the 12 behavioral strands defined in `dna-strands/`. A complete audit evaluates the agent against ALL 19 strand categories.
 
 ### Phase 4: Research (Optional Enhancement)
 
@@ -210,55 +213,67 @@ description: {description}
 
 ## DNA Categories Reference
 
-Use this checklist when auditing. A well-defined agent should have DNA for every category relevant to its role.
+Use this checklist when auditing. A well-defined agent should have DNA for every category relevant to its role. Detailed strand definitions are in the `dna-strands/` directory.
 
-### Architecture DNA
+### Core Strands (built-in)
+
+#### Architecture DNA
 - Dependency direction (always inward)
 - Layer separation (domain, application, infrastructure)
 - Bounded contexts and module boundaries
 - Interface-first design (contracts before implementation)
 - ADR (Architecture Decision Record) discipline
 
-### Frontend Design DNA
+#### Frontend Design DNA
 - Design Thinking process (Purpose, Tone, Constraints, Differentiation)
 - Typography rules (font pairing, hierarchy, never default to Inter/Roboto without reason)
 - Spatial composition (whitespace, grid rhythm, visual weight)
 - Motion philosophy (purposeful animation, not decoration)
 - Color theory (contrast ratios, semantic color usage)
 
-### Writing Quality DNA
-- Anti-slop word list (never: "dive in", "game-changing", "seamless", "robust", "delve", "leverage")
-- No hedging ("might", "could perhaps", "it seems like")
-- AI-native formatting (structured output, scannable, no walls of text)
-- Active voice preference
-- Precision over politeness
-
-### Security DNA
+#### Security DNA
 - Trust boundaries (never trust client input)
 - Auth-first development (auth before features)
 - Rate limiting by default
 - Secrets management (never hardcode, never log)
 - Principle of least privilege
 
-### Accessibility DNA
+#### Accessibility DNA
 - WCAG 2.2 AA as minimum standard
 - Keyboard navigation for all interactive elements
 - Touch targets (minimum 44x44px)
 - Contrast ratios (4.5:1 normal text, 3:1 large text)
 - Screen reader compatibility (semantic HTML, ARIA when needed)
 
-### Testing DNA
+#### Testing DNA
 - TDD cycle: red (write failing test) -> green (minimal code to pass) -> refactor
 - Test pyramid (unit > integration > e2e)
 - Coverage expectations (not 100%, but critical paths covered)
 - Test naming conventions (describe what, not how)
 
-### Quality DNA
+#### Quality DNA
 - Verification gates before merge
 - Code review expectations
 - Performance budgets
 - Error handling standards (never swallow errors)
 - Logging and observability requirements
+
+### Behavioral Strands (see `dna-strands/` for full definitions)
+
+| Strand | Category | File | Relevant Roles |
+|--------|----------|------|----------------|
+| Writing Quality | Communication | `dna-strands/writing-quality.md` | All agents |
+| Output Quality | Artifact Standards | `dna-strands/output-quality.md` | All agents |
+| Requirements Discipline | Scope Clarity | `dna-strands/requirements-discipline.md` | All agents |
+| Adaptability | User Awareness | `dna-strands/adaptability.md` | All agents |
+| Tool Mastery | Capability Utilization | `dna-strands/tool-mastery.md` | All agents |
+| Protocol Awareness | Skill Orchestration | `dna-strands/protocol-awareness.md` | Orchestrators, Lead agents |
+| Patience Discipline | Async Reliability | `dna-strands/patience-discipline.md` | All engineering agents |
+| Completion Discipline | Work Finalization | `dna-strands/completion-discipline.md` | All engineering agents |
+| Delegation Quality | Multi-Agent Coordination | `dna-strands/delegation-quality.md` | Orchestrators, Lead agents |
+| Session Hygiene | Context Preservation | `dna-strands/session-hygiene.md` | All agents |
+| Learning Loops | Self-Improvement | `dna-strands/learning-loops.md` | Orchestrators, All agents |
+| Adversarial Thinking | Conflict & Review | `dna-strands/adversarial-thinking.md` | Orchestrators, QA, Security |
 
 ---
 

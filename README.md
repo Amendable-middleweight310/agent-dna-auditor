@@ -199,19 +199,55 @@ See the full before/after examples in the [`examples/`](./examples) directory.
 
 ---
 
+## DNA Strands
+
+The `dna-strands/` directory contains detailed behavioral strand definitions — DNA rules extracted from proven agent methodologies. Each strand defines core rules, anti-patterns, and verification questions for a specific dimension of agent competence.
+
+Unlike the built-in heuristics (Architecture, Security, etc.), behavioral strands capture *how agents think and operate*: how they ask questions, delegate work, handle async code, exit sessions, and learn across conversations.
+
+**Key points:**
+- Strands are framework-agnostic behavioral directives
+- Each strand file includes core rules, anti-patterns, and verification questions
+- The auditor checks agents against ALL strands (core + behavioral)
+- Strands are extensible — add your own `.md` files to `dna-strands/`
+
+See [`dna-strands/README.md`](./dna-strands/README.md) for the full index and template.
+
+---
+
 ## DNA Categories
 
 The auditor checks for these categories when evaluating an agent's completeness:
+
+### Core Strands (built-in heuristics)
 
 | Category | What it covers | Relevant roles |
 |----------|---------------|----------------|
 | Architecture | Clean Architecture, DDD, dependency direction, ADRs | Backend, Fullstack, Architect |
 | Frontend Design | Design Thinking, typography, spatial composition, motion | Frontend, Design, UX |
-| Writing Quality | Anti-slop, no hedging, AI-native formatting | All agents |
 | Security | Trust boundaries, auth-first, rate limiting, secrets | Backend, Fullstack, DevOps |
 | Accessibility | WCAG 2.2 AA, keyboard nav, touch targets, contrast | Frontend, Design, QA |
 | Testing | TDD methodology, test pyramid, coverage strategy | All engineering agents |
 | Quality | Verification gates, review expectations, error handling | All agents |
+
+### Behavioral Strands (defined in `dna-strands/`)
+
+| Category | What it covers | Relevant roles |
+|----------|---------------|----------------|
+| Writing Quality | Anti-slop, no hedging, AI-native formatting, token budgets | All agents |
+| Output Quality | Artifact templates, traceability, acceptance criteria quality | All agents |
+| Requirements Discipline | Detecting underspecification, structured questions, assumption management | All agents |
+| Adaptability | Calibrating to user expertise, matching communication style, learning from corrections | All agents |
+| Tool Mastery | Using available tools effectively, 1% threshold rule, verification tools | All agents |
+| Protocol Awareness | Skill discovery, composition chains, discoverability optimization | Orchestrators, Lead agents |
+| Patience Discipline | Condition-based waiting, exponential backoff, no arbitrary delays | All engineering agents |
+| Completion Discipline | Test-before-done, structured completion options, destructive action confirmation | All engineering agents |
+| Delegation Quality | Orchestrator-only coordination, contract-first, scope enforcement | Orchestrators, Lead agents |
+| Session Hygiene | Context capture, failure logging, git state recording, actionable next steps | All agents |
+| Learning Loops | Cross-session pattern distillation, confidence scoring, preference artifact generation | Orchestrators, All agents |
+| Adversarial Thinking | Cross-agent review, conflict escalation, decomposition-before-delegation | Orchestrators, QA, Security |
+
+Behavioral strands are extensible. Add your own by creating a `.md` file in `dna-strands/` following the template in [`dna-strands/README.md`](./dna-strands/README.md).
 
 ---
 
